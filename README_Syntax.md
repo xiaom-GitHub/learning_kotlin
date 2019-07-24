@@ -1,8 +1,8 @@
 Function declaration:
 
-fun methodName(params:paramType): ReturnType {
-    // fun body
-}
+	fun methodName(params:paramType): ReturnType {
+		// fun body
+	}
 
 example:
 
@@ -28,14 +28,14 @@ we can assign the default value for params, like:
 we can use `vararg` to indicate Variable number of arguments.
 
 Generic Functions:
-fun <T> singletonList(item: T): List<T> { ... }
+	fun <T> singletonList(item: T): List<T> { ... }
 
 Extension Functions:
 we can use Extension Funcs to extend the method in the original class.
 
-fun ClassType.functionName(parmas:pramaType): ReturnType {
-	// func body
-}
+	fun ClassType.functionName(parmas:pramaType): ReturnType {
+		// func body
+	}
 
 for example. we can extend String class with firstAndLast() func.
 Extensions are resolved statically.
@@ -44,7 +44,7 @@ Anonymous function: lambda
 anonymous function can be used for the params of other function or return vlaue
 of other function.
 
-{ params:paramsType -> func body }
+	{ params:paramsType -> func body }
 
 	for example: { x:Int, y:Int -> x + y }
 
@@ -59,9 +59,9 @@ Higher-Order Functions:
 
 function type declaration:
 
-(paramsType) -> ReturnType
+	(paramsType) -> ReturnType
 
-for example:   (Int, Int) -> Int
+	for example:   (Int, Int) -> Int
 
 higher order function example:
 
@@ -73,9 +73,9 @@ Defining variables:
 val: read-only, equals to "final" in Java
 var: variable
 
-var <variableName>:<variableType> = <initial value>
+	var <variableName>:<variableType> = <initial value>
 
-var <variableName>:<variableType> = <intial value>
+	var <variableName>:<variableType> = <intial value>
 
 example:
 
@@ -130,8 +130,8 @@ The `!!` Operator:
 the not-null assertion operator (!!) converts any value to a non-null type and
 throws an exception if the value is null.
 
-example:
-	val l = b!!.length
+	example:
+		val l = b!!.length
 
 if b is not null, return a non-null value of b; or throw an NPE if b is null.
 
@@ -206,8 +206,8 @@ The class can also declare secondary constructors, which are prefixed with const
 
 secondary MUST delegate to the primary constructor. like `constructor() : this()`
 
-creat a class instance:
-	val customer = Customer("Joe Smith")
+	creat a class instance:
+		val customer = Customer("Joe Smith")
 
 Inside an inner class, accessing the superclass of the outer class is done with the `super`
 keyword qualified with the outer class name: super@Outer.
@@ -253,6 +253,5 @@ Sealed Classes:
 Anonymous inner classes:
 Anonymous inner class instances are created using an object expression.
 functional Java interface (i.e. a Java interface with a single abstract method), using lambda instead.
-
 
 
